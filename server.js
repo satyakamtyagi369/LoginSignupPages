@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname,'public')));
 
 // Routes
-app.get('/signup',(req,res)=>{
+app.get('/',(req,res)=>{
     res.sendFile(path.join(__dirname,'views','signup.html'));
 });
 app.get('/login',(req,res)=>{
@@ -44,6 +44,7 @@ app.post('/signup', async(req,res)=>{
         res.send('Error: User already exists or invalid input.');
     }
 });
+
 
 app.post('/login',async(req,res)=>{
     const {username,password} = req.body;
