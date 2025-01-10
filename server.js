@@ -9,7 +9,7 @@ const port = 3000;
 
 // Connect to MongoDb
 mongoose
-.connect('mongodb://localhost:27017/loginSignupDB',{useNewUrlParser:true,useUnifiedTopology:true})
+.connect('mongodb+srv://satyakamtyagi8979:gtsgo46Tzs1oC7ec@cluster0.hrzmx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0',{useNewUrlParser:true,useUnifiedTopology:true})
 .then(()=> console.log("MongoDB connected."))
 .catch((err) => console.error("MongoDB connection Error:",err));
 
